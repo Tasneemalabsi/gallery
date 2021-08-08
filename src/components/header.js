@@ -4,7 +4,7 @@ import React from 'react';
 class header extends React.Component {
     render () {
         return (
-            <h1> Components</h1>
+            <h1>Beasts</h1>
         );
     };
 };
