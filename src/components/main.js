@@ -30,9 +30,11 @@ class Main extends React.Component {
     render() {
         return (
             <div>
-            {imageArray.map (item=>{
+            {imageArray.map ((item,i)=>{
                 return (
+                    
                 <HornedBeasts
+                key={i}
                     title={item.title}
                     imageUrl={item.image_url}
                     description={item.description}
