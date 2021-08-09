@@ -1,6 +1,8 @@
 import React from 'react';
 import './HornedBeasts.css';
 import HornedBeasts from './HornedBeasts';
+import data from './data.json';
+
 
 let imageArray = [{
     "image_url": "http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg",
@@ -30,7 +32,7 @@ class Main extends React.Component {
     render() {
         return (
             <div>
-            {imageArray.map ((item,i)=>{
+            {data.map ((item,i)=>{
                 return (
                     
                 <HornedBeasts
