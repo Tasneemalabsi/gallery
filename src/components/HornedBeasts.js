@@ -14,10 +14,14 @@ class HornedBeasts extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            votesNumber: 0
-                 }
-   }
-        
+            votesNumber: 0,
+            show:false
+        }
+      }
+      handleShow = () => {
+  
+          this.setState({show:!this.state.show});
+      }
 
    
     
@@ -39,7 +43,7 @@ class HornedBeasts extends React.Component {
     
     <Card >
 <Card.Img variant="top" src={this.props.imageUrl}
-  alt='' title='' onClick={this.props.handleShow} style={{ width: '18rem' }}/>
+  alt='' title='' onClick={this.handleShow} style={{ width: '18rem' }}/>
 <Card.Body>
     <Card.Title>{this.props.title}</Card.Title>
     <Card.Text>
@@ -50,14 +54,14 @@ class HornedBeasts extends React.Component {
 </Card.Body>
 </Card>
 <Modal show={this.state.show} >
-    <Modal.Header closeButton={true} onClick={()=>{this.props.handleShow()}}>
+    <Modal.Header closeButton={true} onClick={()=>{this.handleShow()}}>
       <Modal.Title>{this.props.title}</Modal.Title>
     </Modal.Header>
     <Modal.Body><img width='200px' height='200px' variant="top" src={this.props.imageUrl}
 alt='' title='' /></Modal.Body>
     <Modal.Body>{this.props.description}</Modal.Body>
     <Modal.Footer>
-      <Button variant="secondary" onClick={()=>{this.props.handleShow()}}>
+      <Button variant="secondary" onClick={()=>{this.handleShow()}}>
         Close
       </Button>
      

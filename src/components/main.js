@@ -6,17 +6,6 @@ import data from './data.json';
 
 class Main extends React.Component {
 
-    constructor(props) {
-        super(props);
-      this.state={
-          show:false
-      }
-    }
-    handleShow = () => {
-
-        this.setState({show:!this.state.show});
-    }
-
     render() {
         return (
             <div>
@@ -28,7 +17,6 @@ class Main extends React.Component {
                             title={item.title}
                             imageUrl={item.image_url}
                             description={item.description}
-                            handleShow={}
                         />
                     )
 
