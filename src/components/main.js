@@ -8,6 +8,7 @@ import Form from 'react-bootstrap/Form';
 
 class Main extends React.Component {
 
+
     constructor(props) {
         super (props);
         this.state = {noOfHorns:'',
@@ -52,12 +53,22 @@ class Main extends React.Component {
                  </Form>
                 {this.state.arr.map((item, i) => {
                     return (
+
+    render() {
+        return (
+            <div>
+                {data.map((item, i) => {
+                    return (
+
                         <HornedBeasts
                             key={i}
                             title={item.title}
                             imageUrl={item.image_url}
                             description={item.description}
+
                             horns={item.horns}
+
+
                         />
                     )
 
