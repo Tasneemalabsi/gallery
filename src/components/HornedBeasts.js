@@ -3,7 +3,11 @@ import './HornedBeasts.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+
+import Modal from 'react-bootstrap/Modal';
+
 import Modal from 'react-bootstrap/Modal'
+
 
 
 
@@ -36,7 +40,10 @@ class HornedBeasts extends React.Component {
     }
     
     render () {
+
+
         console.log(this.props);
+
        
   return (
     <>
@@ -67,6 +74,11 @@ alt='' title='' /></Modal.Body>
      
     </Modal.Footer>
   </Modal>
+
+  
+
+
+
     </>
   );
 }
